@@ -1,0 +1,285 @@
+/*
+Theme Name: widget_test_1
+Theme URI: http://wordpress.local
+Author: Huynh Anh Tu
+Author URI: http://wordpress.local
+Description: Theme danh cho bai kiem tra CMS - widget_test_1
+Version: 1.0.0
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #f7fafc;
+}
+
+a {
+    color: #2b6cb0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #2c5282;
+    text-decoration: underline;
+}
+
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.site-header .site-branding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.site-title a {
+    color: #1a202c;
+    text-decoration: none;
+}
+
+.site-description {
+    color: #718096;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.site-navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.site-navigation a {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.site-navigation a:hover {
+    color: #2b6cb0;
+}
+
+/* Main Content */
+.site-main {
+    padding: 40px 20px;
+    min-height: 60vh;
+}
+
+.page-header-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #1a202c;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* Post Grid (Trang chu, Trang danh sach) */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.post-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.post-card-thumb {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.post-card-title a {
+    color: #1a202c;
+}
+
+.post-card-meta {
+    font-size: 13px;
+    color: #a0aec0;
+    margin-bottom: 12px;
+}
+
+.post-card-excerpt {
+    font-size: 14px;
+    color: #4a5568;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* Trang chi tiet (Single Post) */
+.single-post-article {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.single-post-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1a202c;
+    line-height: 1.3;
+}
+
+.single-post-meta {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.single-post-thumb {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.single-post-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2d3748;
+}
+
+.single-post-content p {
+    margin-bottom: 18px;
+}
+
+.single-post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.single-post-content iframe {
+    max-width: 100%;
+}
+
+/* ============================================================ */
+/* KHU VUC WIDGET_TEST_1 PHIA TREN FOOTER                       */
+/* ============================================================ */
+.widget-test-1-section {
+    background: #ffffff;
+    padding: 35px 0;
+    border-top: 2px solid #e2e8f0;
+    border-bottom: 2px solid #e2e8f0;
+    margin-top: 40px;
+}
+
+.widget-test-1-section .widget-section-header {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2b6cb0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.widget-test-1-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.widget-test-1-item {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.widget-test-1-item h2,
+.widget-test-1-item h3,
+.widget-test-1-item .widget-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3182ce;
+}
+
+.widget-test-1-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-test-1-item li {
+    padding: 8px 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.widget-test-1-item li:last-child {
+    border-bottom: none;
+}
+
+.widget-test-1-item li a {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.widget-test-1-item li a:hover {
+    color: #3182ce;
+}
+
+/* Footer */
+.site-footer {
+    background: #1a202c;
+    color: #cbd5e0;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+}
